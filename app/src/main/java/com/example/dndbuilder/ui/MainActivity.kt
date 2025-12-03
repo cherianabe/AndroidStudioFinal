@@ -1,5 +1,6 @@
 package com.example.dndbuilder.ui
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import com.example.dndbuilder.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var b : ActivityMainBinding
+    private lateinit var mp: MediaPlayer
 
     val dndViewModel: DndViewModel by viewModels()
 
@@ -26,5 +28,34 @@ class MainActivity : AppCompatActivity() {
                 .replace(b.fragmentContainer.id, ChooseClassFragment())
                 .commit()
         }
+
+        mp = MediaPlayer.create(this, R.raw.maintheme)
+        mp.isLooping = true
+        mp.start()
+
+
+    }
+    override fun onPause() {
+        super.onPause()
+        if (this::mp.isInitialized && mp.isPlaying) {
+            mp.pause()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (this::mp.isInitialized) {
+            mp.start()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (this::mp.isInitialized) {
+            mp.release()
+        }
     }
 }
+
+
+

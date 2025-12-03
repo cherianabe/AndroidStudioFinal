@@ -52,7 +52,7 @@ class QuestionFragment : Fragment() {
         }
 
         // Observe stats and update the top stats bar live
-        viewModel.stats.observe(viewLifecycleOwner) { stats ->
+        /*viewModel.stats.observe(viewLifecycleOwner) { stats ->
             stats?.let {
                 b.tvStrQuestion.text = "STR: ${it.str}"
                 b.tvDexQuestion.text = "DEX: ${it.dex}"
@@ -61,7 +61,7 @@ class QuestionFragment : Fragment() {
                 b.tvWisQuestion.text = "WIS: ${it.wis}"
                 b.tvChaQuestion.text = "CHA: ${it.cha}"
             }
-        }
+        }*/
 
         btnNext.setOnClickListener {
             parentFragmentManager.beginTransaction()

@@ -18,16 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/orb" />
+        app:srcCompat="@drawable/classbackground" />
 
     <Button
         android:id="@+id/btnWarrior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginBottom="453dp"
+        android:layout_marginBottom="460dp"
+        android:background="@android:color/transparent"
         android:fontFamily="cursive"
         android:text="Warrior"
         android:textColor="@color/black"
@@ -35,34 +36,35 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        android:background="@android:color/transparent"
-        />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <Button
         android:id="@+id/btnWizard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:layout_marginBottom="341dp"
+        android:background="@android:color/transparent"
         android:fontFamily="cursive"
         android:text="Wizard"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@android:color/transparent"
-        />
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.48" />
 
     <Button
         android:id="@+id/btnRogue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="443dp"
-        android:layout_marginBottom="240dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginBottom="200dp"
+        android:background="@android:color/transparent"
         android:fontFamily="cursive"
         android:text="Rogue"
         android:textColor="@color/black"
@@ -72,8 +74,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        android:background="@android:color/transparent"
-        />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
